@@ -1,11 +1,11 @@
 package com.ita.u1.hw.Dao;
 
 import com.ita.u1.hw.Model.User;
+import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
+import org.hibernate.SessionFactory;
 
 import java.util.List;
 
@@ -16,6 +16,7 @@ public class UserDaoImpl implements UserDao{
 
     private SessionFactory sessionFactory;
 
+    @Autowired
     public UserDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }

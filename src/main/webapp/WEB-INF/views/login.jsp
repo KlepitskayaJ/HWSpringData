@@ -2,22 +2,16 @@
 <c:url value="/login" var="loginUrl"/>
 
 <form action="${loginUrl}" method="post">
-<%--    <c:if test="${param.error != null}">--%>
-<%--        <p>--%>
-<%--            Invalid username and password.--%>
-<%--        </p>--%>
-<%--    </c:if>--%>
-<%--    <c:if test="${param.logout != null}">--%>
-<%--        <p>--%>
-<%--            You have been logged out.--%>
-<%--        </p>--%>
-<%--    </c:if>--%>
     <p>
-        <label for="username">UsernameCustom</label>
+        <label for="username">Firstname</label>
         <input type="text" id="username" name="username"/>
     </p>
     <p>
-        <label for="password">PasswordCustom</label>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email"/>
+    </p>
+    <p>
+        <label for="password">Password</label>
         <input type="password" id="password" name="password"/>
     </p>
     <input type="hidden"

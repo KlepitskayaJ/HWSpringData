@@ -19,7 +19,7 @@ public class HibernateConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.ita.u1.hw.Model");
+        sessionFactory.setPackagesToScan("com.ita.u1.hw");
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;
@@ -29,7 +29,7 @@ public class HibernateConfig {
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:8080/security");;
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/security");;
         dataSource.setUsername("postgres");
         dataSource.setPassword("1234");
 
@@ -49,7 +49,7 @@ public class HibernateConfig {
         hibernateProperties.setProperty(
                 "hibernate.hbm2ddl.auto", "update");
         hibernateProperties.setProperty(
-                "hibernate.dialect", "org.hibernate.dialect.PostgreSQL94Dialect");
+                "hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 
         return hibernateProperties;
     }

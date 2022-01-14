@@ -1,6 +1,6 @@
 package com.ita.u1.hw.Model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "user_roles")

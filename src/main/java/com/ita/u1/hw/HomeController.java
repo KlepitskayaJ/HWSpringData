@@ -1,4 +1,4 @@
-package com.ita.u1.hw.Controller;
+package com.ita.u1.hw;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class HomeController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index() {
-        return "index";
-    }
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
         return "login";
+    }
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public String usersList() {
+        return "users";
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
