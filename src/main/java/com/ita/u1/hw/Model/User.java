@@ -8,7 +8,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "user_id")
     private Integer id;
 
     @Column(name = "firstname")
@@ -21,7 +21,7 @@ public class User {
     private String password;
 
     @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "id")
     private List<Role> roles;
 
     public Integer getId() {

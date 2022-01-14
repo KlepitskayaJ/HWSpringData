@@ -20,7 +20,6 @@ public class UserDetailServiceImpl implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("Could not find user");
         }
-        System.out.println("EMAIL - " + user.getEmail());
         return new SecurityUser(user);
     }
 }
