@@ -7,9 +7,9 @@
 classes/
 out/
 target/
-mvnw.cmd
-mvnw
-HELP.md
+/mvnw.cmd
+/mvnw
+/HELP.md
 
 
 
